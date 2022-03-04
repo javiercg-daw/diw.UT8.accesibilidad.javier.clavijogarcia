@@ -22,13 +22,12 @@ Para usos en todo el DOM
 
 /* Parrafos y definiciones que tengan el mismo estilo:
 Color de la fuente, el espacio entre lineas
-Padding superior e inferior, para crear una pequeña separación y el texto justificado*/
+Padding superior e inferior, para crear una pequeña separación*/
 
 p, dd{
 	padding: 12px 0px;
-	color: #222;
+	color: #262626;
 	line-height: 1.4rem;
-	text-align: justify;
 }
 
 /*Quitar el margen inicial que mete por defecto los navegadores.*/
@@ -41,7 +40,7 @@ dd{
 Borde superior e inferior.
 Un espacio interno de 20px para separarlo del borde.
 Espacio entre lineas y tamaño de la fuente.
-Texto justificado y color de la fuente.
+Color de la fuente.
 */
 blockquote{
 	border-top:3px solid #DDD;
@@ -49,7 +48,6 @@ blockquote{
 	padding: 20px;
 	font-size: 1.2rem;
 	line-height: 1.7rem;
-	text-align: justify;
 	color: #222;
 }
 
@@ -65,7 +63,7 @@ blockquote.gris{
 
 /* Titulos, cambiamos la tipografía con la importada y damos el color a la fuente*/
 h1,h2,h3,.metadatos-articulo{
-	font-family: 'Domine', serif;
+	font-family: sans-serif;
 	color: #222;
 }
 /* h3 y h3 le damos espacio y hacemos que tenga un peso más alto la fuente.*/
@@ -114,7 +112,7 @@ header img{
 
 /*Dandole color, peso y tamaño a la fuente del título principal*/
 header h1{
-	color: #fff;
+	color: #DADADA;
 	font-weight: lighter;
 	margin: 0;
 	font-size: 3.2rem;
@@ -167,11 +165,10 @@ nav ul li:hover, .actual{border-bottom: solid 3px #CC0000;}
  ********************/
 
 /*Alineamos texto al centro*/
-article .pie-foto{text-align: center;}
+.pie-foto{text-align: center;}
 
-/*Justificamos el texto, damos un poco de padding y los margenes laterales*/
+/* Damos un poco de padding y los margenes laterales*/
 section p{
-	text-align: justify;
 	padding: 1px 0px;
 	margin-left: 5px;
     margin-right: 5px;
@@ -187,14 +184,14 @@ section img{
 }
 
 /* Alinemos los pie de foto, damos margenes para que no se pegue al contenido y reducimos la fuente*/
-div.pie-foto{
+.pie-foto{
 	text-align: center;
 	margin-top: 4px;
 	padding-top: 4px;
 	font-size: 0.75rem
 }
 /* ademuamos también el tamaño de los enlaces del pie de foto. */
-div.pie-foto a{
+.pie-foto a{
 	font-size: 0.75rem
 }
 
@@ -226,7 +223,7 @@ Separamos de la parte superior, y reducimos la fuente, además de hacer la letra
 	display: block;
 	font-size: 0.75rem;
 	padding-top: 30px;
-	font-style: italic;
+	font-style: normal;
 }
 
 /*Adecuamos el tamaño del enlace*/
@@ -254,8 +251,8 @@ ol > li:nth-child(2) > ul{ list-style: none;}
 y los elemento de la sublista del tercer elemento tengan otra tipografía y estén en cursiva.*/
 ol > li > ul > li > ul > li,
 ol > li:nth-child(3) > ul > li{
-	font-style: italic;
-	font-family: serif
+	font-style: normal;
+	font-family: sans-serif
 }
 
 /*******************
@@ -277,4 +274,15 @@ footer p{
 	font-size: 0.85rem;
 }
 
+/* Estilos añadidos para mejorar la accesibilidad */
+main header, main footer {
+	background-color: #fff;
+}
 
+.align-center {
+	text-align: center;
+}
+
+* {
+	color:#262626;
+}
