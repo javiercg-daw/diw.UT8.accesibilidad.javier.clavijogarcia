@@ -4,21 +4,27 @@
 <head>
 	<title>Terminología · PEC1 HTML y CSS</title>
 	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 </head>
 
 <body>
 	<header>
 		<div class="contenedor">
-			<img src="./img/logo-website.jpg" alt="Dossiers+. Cultura digital">
+			<img src="./img/logo-website.jpg" alt="Dossiers Plus. Cultura digital">
 			<h1>#1 La credibilidad de los medios</h1>
 		</div>
 	</header>
-	<nav>
-		<ul>
-			<li><a href="fin-confianza.html">ARTÍCULO</a></li>
-			<li><a href="recursos.html">RECURSOS</a></li>
-			<li class="actual"><a href="terminologia.html">TERMINOLOGÍA</a></li>
+	<nav aria-labelledby="menu-label">
+		<h2 id="menu-label" class="visuallyhidden">Menú</h2>
+		<ul role="menu">
+			<li role="menuitem"><a href="fin-confianza.html" aria-checked="false">ARTÍCULO</a></li>
+			<li role="menuitem"><a href="recursos.html" aria-checked="false">RECURSOS</a></li>
+			<li class="actual"><a href="terminologia.html" role="menuitem" aria-checked="true"
+					aria-current="page">TERMINOLOGÍA</a>
+			</li>
 		</ul>
 	</nav>
 	<main class="contenedor">
@@ -43,10 +49,11 @@
 				Instiga violencia, discriminación u hostilidad hacia determinados grupos sociales. Las redes sociales
 				contribuyen a esparcir prejuicios, y muchas campañas tratan de luchar contra ello.
 				<figure>
-				<iframe width="700" height="400" src="https://www.youtube.com/embed/CH5rECBURD4?rel=0&amp;showinfo=0"
-					allow="autoplay; encrypted-media" allowfullscreen></iframe>
-				<figcaption class="pie-foto">Hate Speech</figcaption>
-			</figure>
+					<iframe width="700" height="400"
+						src="https://www.youtube.com/embed/CH5rECBURD4?rel=0&amp;showinfo=0"
+						allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<figcaption class="pie-foto">Hate Speech</figcaption>
+				</figure>
 			</dd>
 			<dt lang="en">Fake news</dt>
 			<dd>Este término nos sirve para identificar desde las noticias directamente falsas (mentiras) hasta las
@@ -56,9 +63,11 @@
 			<dt>Posverdad</dt>
 			<dd>
 				Tiene el honor de ser la palabra del año 2016 según el diccionario Oxford, que la define como:
-				<blockquote class="gris" lang="en">Relating to or denoting circumstances in which objective facts are less
+				<blockquote class="gris" lang="en">Relating to or denoting circumstances in which objective facts are
+					less
 					influential in shaping public opinion than appeals to emotion and personal belief.</blockquote>
-				<img src="img/woty2016.png" class="align-center" alt="Oxford Dictionaries Word of the Year: post-truth" lang="en">
+				<img src="img/woty2016.png" class="align-center" alt="Oxford Dictionaries Word of the Year: post-truth"
+					lang="en">
 			</dd>
 
 			<dd>Es, pues, el tipo de información donde los hechos objetivos tienen menos influencia que las llamadas a
@@ -73,7 +82,7 @@
 		</dl>
 
 		<span class="pie-articulo">
-			Elaborado a partir de la información Educac. <span lang="en">Fake news:</span> <span lang="cat">com les
+			Elaborado a partir de la información Educac. <span lang="en">Fake news:</span> <span lang="ca">com les
 				podem detectar?</span>. Consultado desde <a
 				href="https://www.educac.cat/families/fake-news-com-les-podem-detectar" target="_blank"
 				aria-label="Ir al artículo original en Educac">Educac</a>
