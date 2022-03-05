@@ -331,12 +331,12 @@ fieldset {
 }
 
 legend {
-	padding:0;
+  padding: 0;
 }
 
 label {
-	display: block;
-	padding: 0.2em;
+  display: block;
+  padding: 0.2em;
 }
 
 /* Formateamos con el ancho 100%, borde a toda la caja, hacemos que nos se modifique por el usuario
@@ -438,4 +438,205 @@ footer p {
   padding: 5px 0px;
   margin: 0;
   font-size: 0.85rem;
+}
+
+/* Responsive and accessibility styles */
+
+/* All elements */
+* {
+  /* Set box-sizing to avoid padding overflow issues */
+  box-sizing: border-box;
+}
+
+/* Class for hiding elements visually while allowing screen readers to access them.  */
+/* Source:  https://www.w3.org/WAI/tutorials/forms/labels/#note-on-hiding-elements */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* Anchor tags */
+main a {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    width: 100vw;
+  }
+
+  /* Page header */
+  body > header {
+    width: 100%;
+    margin: 20px;
+    width: 100vw;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+  header div {
+    float: none;
+  }
+
+  /* Navigation */
+
+  header img {
+    width: 100%;
+  }
+
+  header nav {
+    width: 100%;
+    float: none;
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 0;
+    text-align: center;
+  }
+
+  header nav li {
+    width: 100%;
+  }
+
+  /* Main */
+  main div,
+  .inicioDestacado div {
+    float: none;
+  }
+
+  header div,
+  .index div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Index */
+
+  /* First section */
+  .inicioDestacado {
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .index h1 {
+    padding: 0;
+  }
+
+  .inicioDestacado div {
+    margin: 20px 0;
+  }
+
+  .inicioDestacado p[role="doc-subtitle"] {
+    padding-right: 0;
+  }
+
+  .inicioDestacado iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    height: auto;
+  }
+
+  /* Second section */
+  .inicioCifras {
+    padding-top: 0;
+  }
+
+  .inicioCifras h2 {
+    padding: 20px;
+  }
+
+  .inicioCifrasColumnas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .inicioCifrasColumnas article {
+    padding: 0;
+    padding-bottom: 20px;
+  }
+
+  /* Third section */
+
+  .inicioObjetivos {
+    width: 100%;
+  }
+
+  .inicioObjetivos ul {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .inicioObjetivos ul li {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* General */
+  .clear,
+  .index .clear {
+    clear: none;
+    display: none;
+  }
+
+  /* 'Publish' page */
+  .publicarFormulario {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .publicarFormulario form {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .publicar form label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+  }
+
+  .publicarFormulario form label input {
+    margin: 0 10px;
+  }
+
+  /* 'Latest uploads' page */
+
+  .ultimos-envios {
+    width: 100%;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  tr {
+    display: flex;
+    flex-direction: column;
+  }
+
+  td,
+  th {
+    padding: 5px;
+  }
 }
