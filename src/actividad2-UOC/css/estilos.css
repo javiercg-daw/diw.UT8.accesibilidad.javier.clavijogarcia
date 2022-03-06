@@ -446,6 +446,7 @@ footer p {
 * {
   /* Set box-sizing to avoid padding overflow issues */
   box-sizing: border-box;
+  line-height: 1.5;
 }
 
 /* Class for hiding elements visually while allowing screen readers to access them.  */
