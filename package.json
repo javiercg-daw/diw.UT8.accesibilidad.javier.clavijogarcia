@@ -1,0 +1,11 @@
+{
+  "name": "diw_ut8_accesibilidad_web_javier_clavijogarcia",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "parcel": "latest"
+  }
+}
