@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-	<title>Despositar un documento · PEC2 HTML y CSS</title>
+	<title>Depositar un documento · PEC2 HTML y CSS</title>
 	<meta charset="UTF-8">
 	<meta name="viewport"
 		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -14,25 +14,31 @@
 
 <body class="publicar">
 	<header>
-		<div>
+		<div role="banner">
 			<a href="index.html"><img src="img/logo.png" alt="Universitat Oberta de Catalunya"
 					aria-labelledby="index-link-description"></a>
 			<p id="index-link-description" class="visuallyhidden">Ir a la página de inicio</p>
 		</div>
-		<nav>
-			<ul>
-				<li><a href="index.html">Inicio</a></li>
-				<li><a href="http://openaccess.uoc.edu/webapps/o2/?locale=es" target="_blank">Buscar</a></li>
-				<li><a href="publicar.html" class="actual">Publicar</a></li>
-				<li><a href="ultimos-envios.html">Últimos envíos</a></li>
+
+		<nav aria-labelledby="menu-label" role="navigation">
+			<h2 id="menu-label" class="visuallyhidden">Menú de navegación</h2>
+			<ul role="menu">
+				<li role="menuitem"><a href="index.html">Inicio</a></li>
+				<li role="menuitem">
+					<a href="http://openaccess.uoc.edu/webapps/o2/?locale=es" target="_blank" aria-checked="false"
+						aria-labelledby="search-description">Buscar</a>
+					<p id="search-description" class="visuallyhidden">Buscar. Abrir en nueva ventana.</p>
+				</li>
+				<li role="menuitem"><a href="publicar.html" class="actual" aria-checked="true">Publicar</a></li>
+				<li role="menuitem"><a href="ultimos-envios.html" aria-checked="false">Últimos envíos</a></li>
 			</ul>
 		</nav>
 	</header>
 	<div class="clear"></div>
-	<main class="publicarFormulario">
-		<h1>O2: despositar un documento</h1>
+	<main class="publicarFormulario" role="main">
+		<h1>O2: depositar un documento</h1>
 		<p>Los campos marcados con * son obligatorios</p>
-		<form>
+		<form role="form">
 			<h2>Datos de la publicación</h2>
 
 			<label for="comunidad">Comunidad donde debe publicarse *</label>
@@ -62,9 +68,10 @@
 				placeholder="Escribe el título del documento" pattern="[A-Za-z]+" minlength="2" maxlength="64" required
 				aria-required="true">
 
-			<label for="fecha-creacion-documento">Fecha de creación del documento *</label>
-			<input type="date" name="fecha-creacion-documento" id="fecha-creacion-documento" required
-				aria-required="true">
+			<label for="fecha-creacion-documento" id="fecha-creacion-label">Fecha de creación del documento *
+				<input type="date" name="fecha-creacion-documento" id="fecha-creacion-documento" required
+					aria-required="true" aria-labelledby="fecha-creacion-label">
+			</label>
 
 
 			<fieldset>
@@ -136,10 +143,12 @@
 				<legend>Género</legend>
 				<label for="hombre">
 					<input type="radio" name="genero" id="hombre" value="hombre">
+					<span class="visuallyhidden">Género:</span>
 					Hombre
 				</label>
 				<label for="mujer">
 					<input type="radio" name="genero" id="mujer" value="mujer">
+					<span class="visuallyhidden">Género:</span>
 					Mujer
 				</label>
 			</fieldset>
@@ -148,14 +157,17 @@
 				<legend>Tipo de documento de indentidad</legend>
 				<label for="nif">
 					<input type="radio" name="documento" id="nif" value="nif">
+					<span class="visuallyhidden">Tipo de documento de identidad:</span>
 					NIF
 				</label>
 				<label for="nie">
 					<input type="radio" name="documento" id="nie" value="nie">
+					<span class="visuallyhidden">Tipo de documento de identidad:</span>
 					NIE
 				</label>
 				<label for="pass">
 					<input type="radio" name="documento" id="pass" value="pass">
+					<span class="visuallyhidden">Tipo de documento de identidad:</span>
 					PASS
 				</label>
 			</fieldset>
@@ -177,10 +189,12 @@
 				<legend>Idioma para la respuesta *</legend>
 				<label for="castellano">
 					<input type="radio" name="idioma-respuesta" id="castellano" value="castellano">
+					<span class="visuallyhidden">Idioma para la respuesta:</span>
 					Castellano
 				</label>
 				<label for="catalan">
 					<input type="radio" name="idioma-respuesta" id="catalan" value="calatan">
+					<span class="visuallyhidden">Idioma para la respuesta:</span>
 					Catalán
 				</label>
 			</fieldset>
@@ -201,7 +215,7 @@
 		</form>
 	</main>
 	<div class="clear"></div>
-	<footer>
+	<footer role="contentinfo">
 		<p>Trabajo realizado por Alejandro Carmona Martos, para la asignatura HTML y CSS</p>
 		<p>Primer semestre del curso 2018-2019</p>
 	</footer>

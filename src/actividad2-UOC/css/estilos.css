@@ -626,6 +626,10 @@ main a {
     width: 100%;
   }
 
+  .tabla-envios {
+    padding: 0 20px;
+  }
+
   table {
     width: 100%;
   }
